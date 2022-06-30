@@ -46,6 +46,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/clientes', clientesRouter);
 app.use('/contato', contatoRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/cadastroCliente', cadastroClienteRouter);
@@ -53,7 +54,6 @@ app.use('/nossoscarros', nossoscarrosRouter);
 app.use('/nossoscarroslogado', nossoscarroslogadoRouter);
 app.use('/noticias', noticiasRouter);
 app.use('/quemsomos', quemsomosRouter);
-app.use('/clientes', clientesRouter);
 app.use('/loading',loadingRouter); /* add loading*/ 
 app.use('/login', loginRouter);
 app.use('/volvo', volvoRouter);
@@ -65,10 +65,7 @@ app.use('/users', usersRouter);
 app.use((req, res, next)=> {
   res.status(404).render('not-found')
  });
-//app.use('/enviar_cadastro', enviar_cadastroRouter);
-//app.use('/enviar_contato', enviar_contatoRouter);
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });

@@ -4,11 +4,12 @@
     font-size: 64px;
     font-family: 'Poppins';
     text-align: center;
+    line-height: 40px;
 }
 
 .cadastro {
     grid-column-start: 2;
-    
+    line-height: 30px;
 }
 
 .cadastro-bg {
@@ -19,7 +20,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 5px;
-    
+    line-height: 20px;
 }
 
 /* PAGINA CLIENTES TESTE */   
